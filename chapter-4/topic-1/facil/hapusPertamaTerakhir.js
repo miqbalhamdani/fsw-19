@@ -1,5 +1,5 @@
 function hapusPertamaTerakhir (str) {
-  return str.slice(1, -1)
+  return str.substring(1, str.length-1);
 }
 
  console.log(hapusPertamaTerakhir('javascript')); // avascrip
