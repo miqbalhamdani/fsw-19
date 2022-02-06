@@ -3,11 +3,9 @@ class Human {
     this.name = name;
     this.address = address;
   }
-
   introduce() {
     console.log(`Hi, my name is ${this.name}`);
   }
-
   work() {
     console.log("Work!");
   }
