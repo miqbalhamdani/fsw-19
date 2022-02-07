@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Belajar DOM</title>
+  </head>
+  <body>
+    <h1>DOM (Document Object Modeling)</h1>
+
+    <p id="paragraph-one" class="description">
+      Nah, DOM menyediakan sekumpulan fungsi dan attribute/data yang bisa kita
+      manfaatkan dalam membuat program JavaScript. Fungsi itu dikenal dengan
+      sebutan API (Application Programming Interface).
+    </p>
+
+    <p id="paragraph-two" class="description">
+      Oh, iya! DOM nggak cuma untuk dokumen HTML saja, tetapi juga bisa
+      digunakan untuk dokumen XML dan SVG. Dan, tentunya bisa digunakan di
+      bahasa pemrograman lain.
+    </p>
+
+    <br />
+
+    <h1>Input Form</h1>
+
+    <input type="text" name="firstName" value="iqbal" />
+
+    <br />
+    <br />
+
+    <input type="text" name="lastName" value="hamdani" />
+
+    <br />
+    <br />
+
+    <input type="radio" id="html" name="language" value="HTML" />
+    <label for="html">HTML</label><br />
+    <input type="radio" id="css" name="language" value="CSS" />
+    <label for="css">CSS</label><br />
+    <input type="radio" id="javascript" name="language" value="JavaScript" />
+    <label for="javascript">JavaScript</label>
+
+    <br />
+    <br />
+
+    <script>
+      // get element by id
+      const p1 = document.getElementById("paragraph-one");
+      // console.log(p1);
+
+      // get element by name
+      const firstName = document.getElementsByName("firstName");
+      const lastName = document.getElementsByName("lastName");
+      // console.log(firstName);
+
+      // get element by name
+      const language = document.getElementsByName("language");
+      // console.log(language);
+
+      // get element by class name
+      const description = document.getElementsByClassName("description");
+      // console.log(description);
+
+      // get elemnet by html tag
+      const label = document.getElementsByTagName("label");
+      // console.log(label);
+
+      // get element by query selector
+      const queryP = document.querySelector("input[name=lastName]").value;
+      console.log(queryP);
+
+      // get element by query selector
+      const allQueryP = document.querySelectorAll("p");
+      // console.log(allQueryP);
+    </script>
+  </body>
+</html>

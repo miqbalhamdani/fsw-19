@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+  </head>
+  <body>
+    <label>Operand A</label>
+    <input type="number" id="operand-a" value="" />
+    <br />
+    <br />
+
+    <select name="operator">
+      <option value="">-- PILIH OPERATOR --</option>
+      <option value="+">+ (Tambah)</option>
+      <option value="-">- (Kurang)</option>
+      <option value="*">* (Kali)</option>
+      <option value="/">/ (Bagi)</option>
+    </select>
+    <br />
+    <br />
+
+    <label>Operand B</label>
+    <input type="number" id="operand-b" value="" />
+    <br />
+    <br />
+
+    <button type="button">Calculate</button>
+
+    <h1 id="result"></h1>
+
+    <script>
+      let operandA = 0;
+      let operandB = 0;
+
+      // get element A
+      const inputA = document.getElementById("operand-a");
+      inputA.addEventListener("change", () => {
+        operandA = inputA.value;
+      });
+
+      // get element A
+      const inputB = document.getElementById("operand-b");
+      inputB.addEventListener("change", () => {
+        operandB = inputB.value;
+      });
+
+      // get operator
+      let operator = "";
+      document
+        .getElementsByName("operator")[0]
+        .addEventListener("change", () => {
+          console.log("its select option running");
+          operator = document.getElementsByName("operator")[0].value; // + , - , * , /
+        });
+
+      // function isEmptyOperator() {
+      //   if (operator === "") return true;
+      //   else return false;
+      // }
+
+      // function isEmptyOperator() {
+      //   return (operator === "") ? true : false;
+      // }
+
+      const btn = document
+        .getElementsByTagName("button")[0]
+        .addEventListener("click", () => {
+          // const isEmptyOperator = isEmptyOperator();
+          if (!operator) {
+            alert("Silahkan Pilih Operator Terlebih Dahulu ...");
+            return;
+          }
+
+          const a = parseInt(operandA);
+          const b = +operandB;
+
+          let result = 0;
+          if (operator === "+") {
+            result = a + b;
+          } else if (operator === "-") {
+            result = a - b;
+          } else if (operator === "*") {
+            result = a * b;
+          } else if ("operator" === "/") {
+            result = a / b;
+          }
+
+          console.log("apakah perhitungan ini berjalan?");
+          document.querySelector("h1").innerHTML = result;
+        });
+    </script>
+  </body>
+</html>
