@@ -1,4 +1,6 @@
 class Human {
+  static isLivingOnEarth = true;
+
   constructor(name, address) {
     this.name = name;
     this.address = address;
@@ -29,3 +31,5 @@ Isyana.code(); // Code some
 
 Isyana.introduce(); // Hi, my name is Isyana
 Isyana.work(); // Work!
+
+console.log(Human.isLivingOnEarth);
