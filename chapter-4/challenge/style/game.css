@@ -30,3 +30,14 @@ img {
   letter-spacing: 0.1em;
   color: #bd0000;
 }
+
+.player-result {
+  height: 100px;
+  width: 300px;
+  background-color: green;
+  color: white;
+  font-size: 40px;
+  text-align: center;
+  transform: rotate(-20deg);
+  display: none;
+}

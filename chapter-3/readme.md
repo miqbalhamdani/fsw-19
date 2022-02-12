@@ -22,6 +22,10 @@ source: [https://www.computerhope.com/issues/ch000619.htm](https://www.computerh
 - Menggunakan NPM
 - Konek ke server
 
+### Bash Syntax
+
+[https://devhints.io/bash](https://devhints.io/bash)
+
 ### Development Step
 
 1. Create VPS / Server
