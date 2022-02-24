@@ -1,7 +1,7 @@
 const fs = require('fs');
 
-fs.writeFileSync('./readme.txt', 'i love javascript');
+fs.writeFileSync('./text.txt', 'i love javascript');
 
-const inputText = fs.readFileSync('./readme.txt', 'utf-8');
+const inputText = fs.readFileSync('./text.txt', 'utf-8');
 
 console.log(inputText);
