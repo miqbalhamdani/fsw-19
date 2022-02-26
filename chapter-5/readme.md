@@ -1,11 +1,5 @@
 # NodeJS
 
-### Todos
-
-1. [ ] Mampu menginisiasi project menggunakan package manager
-2. [ ] Mampu melakukan konfigurasi package.json
-3. [ ] Mampu menggunakan module untuk melakukan read dan write file
-
 Ada tiga tipe module di dalam Node.js
 
 1. Core Module
@@ -51,3 +45,18 @@ Ada tiga tipe module di dalam Node.js
 File system ini yang saya tahu, digunakan untuk menyimpan log, sebagai contoh log semuah transaksi saat checkout hingga bayar, atau pemesanan tiket kereta yang membutuhkan integrasi ke beberapa layanan.
 
 Tapi pada implementasi nya, itu hanya berlaku untuk aplikasi kecil, sedangkan untuk aplikasi besar sudah tidak digunakan karena justru akan memberatkan aplikasi itu sendiri.
+
+# HTTP
+
+- [Status code](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status)
+- [Detail Penjelasan Tentang HTTP](https://www.youtube.com/watch?v=92Rjzrq4oIg&t=6s)
+
+# Express JS
+
+### Macam Framework NodeJS
+
+- Sails.js
+- Hapi.js
+- Koa.js
+- Nest.js
+- Adonis
