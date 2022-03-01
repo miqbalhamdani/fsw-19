@@ -7,8 +7,7 @@ app.get("/", (req, res) => {
   res.send(`Hello im ${req.query.name}, ${job} developer`);
 });
 
-app.get("/:category/subcategory/:subcategory", (req, res) => {
-  console.log(req.params);
+app.get("/:category/:subcategory", (req, res) => {
   res.send(
     `category nya adalah ${req.params.category}, dan sub category nya adalah ${req.params.subcategory}`
   );
