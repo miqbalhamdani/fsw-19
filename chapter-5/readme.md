@@ -60,3 +60,47 @@ Tapi pada implementasi nya, itu hanya berlaku untuk aplikasi kecil, sedangkan un
 - Koa.js
 - Nest.js
 - Adonis
+
+# EJS
+
+### Running CSS file di EJS
+
+Supaya file css, js, bisa terbaca, kita harus set file-file tersebut sebagai ***static***.
+
+```js
+// index.js
+app.use(express.static('assets'))
+```
+
+Sintak di atas, adalah cara ***express*** untuk membuat folder `assets` menjadi ***static folder***. Jadi seluruh file yang berada di dalam folder `assets` akan menjadi static file.
+
+```html
+<!-- import file css di ejs -->
+<link href="css/index.css" rel="stylesheet" />
+
+<!-- import file javascript di ejs -->
+<script src="js/game.js"></script>
+```
+
+Di atas adalah cara import file css dan javascript. Dimana di dalam folder `assets` ada folder bernama `css`, dan `js`. Struktur folder nya akan seperti dibawah:
+
+```
+assets
+├── css
+│   ├── index.css
+│   └── game.css
+├── js
+│   ├── game.js
+│   └── ...
+├── img
+└── ...
+node_modules
+views
+index.js
+...
+```
+Untuk folder yang akan dijadikan ***static*** bebas nama folder nya, kalo misalkann nama folder nya `public`, maka settting static folder nya akan jadi seperti ini di file `index.js`.
+
+```js
+app.use(express.static('public'))
+```
