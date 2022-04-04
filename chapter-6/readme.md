@@ -26,16 +26,6 @@ Tipe Database:
 
 ![](https://miro.medium.com/max/1214/0*GbAB-bGDGaWtfOxi.jpeg)
 
-### SQL Syntax
-
-Postgre
-
-```sql
-psql postgres -- untuk masuk Postgre
-
-\l -- untuk melihat database
-```
-
 ### MongoDB Syntax
 
 ```sql
@@ -64,4 +54,27 @@ db.books.insertMany([
  "description": "Enterprise Frontend Framework"
 }
 ])
+```
+
+# Postgre Syntax
+
+```sql
+psql postgres -- untuk masuk Postgre
+
+\l -- untuk melihat database
+
+\c nama_database -- untuk connect/masuk ke database
+
+\dt -- untuk melihat seluruh table di dalam sebuah database
+
+\d nama_table -- untuk melihat struktur table
+```
+
+# SQL Syntax
+
+### Create User
+
+```sql
+
+
 ```

@@ -3,13 +3,24 @@ const app = express();
 
 app.use(express.json());
 
-const { Product } = require("./models");
+const { Product, Publisher } = require("./models");
 
 // 1 req
 // 2 res
 // Get All Data
 app.get("/", async (_, res) => {
-  const data = await Product.findAll();
+  const data = await Product.findAll({
+    include: [
+      {
+        model: Publisher,
+        as: 'Publisher',
+        attributes: ['name'],
+      }
+    ],
+    where: {
+      name: 'Lenovo Slim',
+    },
+  });
   res.json(data);
 });
 
