@@ -1,0 +1,14 @@
+<div class="container">
+  <h1 class="bg-warning mt-3"><%= judul %></h1>
+  <p><%= deskripsi %></p>
+
+  <ul class="list-group mt-5">
+    <!-- ejs -->
+    <% todos.forEach((element, index) => { %>
+
+    <!-- html -->
+    <li class="list-group-item"><%= index+1 %> . <%= element.name %></li>
+
+    <% }) %>
+  </ul>
+</div>
